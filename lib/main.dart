@@ -1,3 +1,4 @@
+import 'package:ecommerce/nav_bar_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -12,10 +13,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      theme: ThemeData(
-        useMaterial3: true,
-      ),
-      home: const BottomAppBar(),
+      theme: ThemeData(),
+      home: BottomNavBar(),
     );
   }
 }
