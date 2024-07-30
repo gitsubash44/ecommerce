@@ -1,3 +1,6 @@
+import 'package:ecommerce/screens/Cart/cart_screen.dart';
+import 'package:ecommerce/screens/Fevorite/favorite.dart';
+import 'package:ecommerce/screens/Home/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:ecommerce/constants.dart';
 
@@ -10,6 +13,13 @@ class BottomNavBar extends StatefulWidget {
 
 class _BottomNavBarState extends State<BottomNavBar> {
   int currentIndex = 2;
+  List screens = const [
+    Scaffold(),
+    Favorite(),
+    HomeScreen(),
+    CartScreen(),
+    Scaffold(),
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -106,6 +116,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
           );
         },
       ),
+      body: screens[currentIndex],
     );
   }
 }
